@@ -127,6 +127,8 @@ class LIST(QWidget):
         
         with open("hello.txt", "r") as f:
             for i in f.read().split("\n"):
+                if i == "":
+                    break
                 i = i.split(" ")
                 self.engListWdg.addItem(f"{self.navbat}.{i[0]}")
                 self.uzListWdg.addItem(f"{self.navbat}.{i[-1]}")
